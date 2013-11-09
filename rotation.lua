@@ -12,7 +12,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
 
   -- Buffs
   { "Legacy of the White Tiger", "!player.buff" },
-  { "Legacy of the Emporer", "!player.buff" },
+  { "Legacy of the Emperor", "!player.buff" },
   
   -- Cooldowns
   {{
@@ -34,7 +34,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
 		{
 			"modifier.cooldowns",
       "!player.moving",
-      "@rootFrost.useGloves"
+      "@rootWind.useGloves"
 		}
 	},
 
