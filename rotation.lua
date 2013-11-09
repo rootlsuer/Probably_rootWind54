@@ -19,6 +19,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     { "Lifeblood", "player.spell(121279).exists" },
     { "Berserking", "player.spell(26297).exists" },
     { "Blood Fury", "player.spell(33702).exists" },
+    { "#gloves", "@rootWind.useGloves" },
     { "!/use Potion of Virmen's Bite", "@rootWind.usePot" },
   }, "modifier.cooldowns" },
 
@@ -30,13 +31,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     }
   },
 
-  { "#gloves",
-		{
-			"modifier.cooldowns",
-      "!player.moving",
-      "@rootWind.useGloves"
-		}
-	},
+
 
   -- Shared
   {{
