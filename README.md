@@ -18,4 +18,6 @@ Features
 Todo
 ====================
 - 5.4 Events
+- Hotkeys
 - Mouseover SEF
+- Zen Sphere Tracking
