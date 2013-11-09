@@ -13,9 +13,15 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   -- Buffs
   { "Legacy of the White Tiger", "!player.buff" },
   { "Legacy of the Emporer", "!player.buff" },
-  { "Lifeblood", "modifier.cooldowns" },
-  { "Berserking", "modifier.cooldowns" },
-  { "Blood Fury", "modifier.cooldowns" },
+  
+  -- Cooldowns
+  {{
+    { "Lifeblood", "player.spell(121279).exists" },
+    { "Berserking", "player.spell(26297).exists" },
+    { "Blood Fury", "player.spell(33702).exists" },
+    { "Potion of Virmen's Bite", "@rootWind.usePot" },
+  }, "modifier.cooldowns" },
+
   { "Expel Harm", "player.health < 80" },
   { "!/use healthstone",
     {
@@ -23,12 +29,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "@rootWind.checkStone"
     }
   },
-  { "Potion of Virmen's Bite",
-    {
-      "modifier.cooldowns",
-      "@rootWind.usePot"
-    }
-  },
+
   { "#gloves",
 		{
 			"modifier.cooldowns",
