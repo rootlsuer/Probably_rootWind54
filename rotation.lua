@@ -19,7 +19,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     { "Lifeblood", "player.spell(121279).exists" },
     { "Berserking", "player.spell(26297).exists" },
     { "Blood Fury", "player.spell(33702).exists" },
-    { "Potion of Virmen's Bite", "@rootWind.usePot" },
+    { "!/use Potion of Virmen's Bite", "@rootWind.usePot" },
   }, "modifier.cooldowns" },
 
   { "Expel Harm", "player.health < 80" },
