@@ -73,6 +73,19 @@ function rootWind.useGloves(target)
   return true
 end
 
+function rootWind.fillBlackout()
+  local energy = UnitPower("player")
+  local regen = select(2, GetPowerRegen("player"))
+  local start, duration, enabled = GetSpellCooldown(107428)
+  if not start then return false end
+  if start ~= 0 then
+    local remains = start + duration - GetTime()
+    return (energy + regen * remains) >= 40
+  end
+  return 0
+  
+end
+
 function rootWind.usePot(target)
 	if not (UnitBuff("player", 2825) or
 			UnitBuff("player", 32182) or 
@@ -92,6 +105,7 @@ function rootWind.t2d(target)
   if ProbablyEngine.module.combatTracker.enemy[UnitGUID(target)] then
     local ttdest = ProbablyEngine.module.combatTracker.enemy[UnitGUID(target)]['ttdest']
     local ttdsamp = ProbablyEngine.module.combatTracker.enemy[UnitGUID(target)]['ttdsamples']
+    print (ttdest /ttdsamp)
     return (ttdest / ttdsamp)
 	end
   return 600

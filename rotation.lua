@@ -61,14 +61,14 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       }
     }
   }, "!player.buff(116740)" },
-  { "Energizing Brew", "player.energy < 70" },
+  { "Energizing Brew", "player.timetomax > 5" },
   { "Rising Sun Kick", "!target.debuff(Rising Sun Kick)" },
   { "Tiger Palm",
     {
       "!player.buff(Tiger Power)",
       "target.debuff(Rising Sun Kick)",
       "target.debuff(Rising Sun Kick).duration > 1",
-      "player.energy < 90"
+      "player.timetomax > 1"
     }
   },
   -- AoE
@@ -109,7 +109,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     {
       "!player.moving",
       "!player.buff(Energizing Brew)",
-      "player.energy < 60",
+      "player.timetomax > 4",
       "player.buff(Tiger Power).duration > 4"
     }
   },
@@ -125,11 +125,11 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       { "Zen Sphere", "!focus.buff(Zen Sphere)", "focus" },
       { "Zen Sphere", "!player.buff(Zen Sphere)", "player" },
     }, "player.spell(124081).exists" },
-  }, "player.energy < 70" },
+  }, "player.timetomax > 2" },
   { "Blackout Kick", "player.buff(Combo Breaker: Blackout Kick)" },
   {{
     { "Tiger Palm", "player.buff(Combo Breaker: Tiger Palm).duration <= 2" },
-    { "Tiger Palm", "player.energy <= 50" }
+    { "Tiger Palm", "player.energy >= 2" }
   }, "player.buff(Combo Breaker: Tiger Palm)" },
   { "Jab",
     {
@@ -143,7 +143,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "player.spell(115396).exists"
     }
   },
-  { "Blackout Kick", "player.energy > 10" }
+  { "Blackout Kick", "@rootWind.fillBlackout" }
 },
 {
   -- Out of Combat
