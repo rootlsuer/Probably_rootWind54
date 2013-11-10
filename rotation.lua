@@ -26,7 +26,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "!player.bu​ff(Legacy of the Emperor)",
       "​!player.buff​(Mark of the Wild)",
       "!pl​ayer.buff(Blessing of Kings)",
-      "!playe​r.buff(Embrace of the Shale Spider	)"
+      "!playe​r.buff(Embrace of the Shale Spider)"
     }
   },
   -- Cooldowns
@@ -183,7 +183,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "!player.bu​ff(Legacy of the Emperor)",
       "​!player.buff​(Mark of the Wild)",
       "!pl​ayer.buff(Blessing of Kings)",
-      "!playe​r.buff(Embrace of the Shale Spider	)"
+      "!playe​r.buff(Embrace of the Shale Spider)"
     }
   },
   { "Expel Harm", "toggle.chistacker" }
