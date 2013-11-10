@@ -9,8 +9,26 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   -- Interrupt
   { "Spear Hand Strike", "modifier.interrupts" },
   -- Buffs
-  { "Legacy of the White Tiger", "!player.buff" },
-  { "Legacy of the Emperor", "!player.buff" },
+  { "Legacy of the White Tiger",
+    {
+      "!player.buff(Legacy of the White Tiger)",
+      "!player.buff(Leader of the Pack)",
+      "!player.buff(Arcane Brilliance)",
+      "!player.buff(Dalaran Brilliance)",
+      "!player.buff(Furious Howl)",
+      "!player.buff(Terrifying Roar)",
+      "!player.buff(Fearless Roar)",
+      "!player.buff(Still Water)"
+    }
+  },
+  { "Legacy of the Emperor",
+    {
+      "!player.bu​ff(Legacy of the Emperor)",
+      "​!player.buff​(Mark of the Wild)",
+      "!pl​ayer.buff(Blessing of Kings)",
+      "!playe​r.buff(Embrace of the Shale Spider	)"
+    }
+  },
   -- Cooldowns
   {{
     { "Lifeblood", "player.spell(121279).exists" },
@@ -91,13 +109,13 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     { "Rising Sun Kick",
     {
       "player.chi = 4",
-      "@rootWind.hasNoAscension"
+      "!player.spell(115396).exists"
     }
     },
     { "Rising Sun Kick",
       {
         "player.chi = 5",
-        "@rootWind.hasAscension"
+        "player.spell(115396).exists"
       }
     },
     { "Spinning Crane Kick" }
@@ -147,7 +165,26 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
 },
 {
   -- Out of Combat
-  { "Legacy of the White Tiger", "!player.buff" },
-  { "Legacy of the Emperor", "!player.buff" },
+  -- Buffs
+  { "Legacy of the White Tiger",
+    {
+      "!player.buff(Legacy of the White Tiger)",
+      "!player.buff(Leader of the Pack)",
+      "!player.buff(Arcane Brilliance)",
+      "!player.buff(Dalaran Brilliance)",
+      "!player.buff(Furious Howl)",
+      "!player.buff(Terrifying Roar)",
+      "!player.buff(Fearless Roar)",
+      "!player.buff(Still Water)"
+    }
+  },
+  { "Legacy of the Emperor",
+    {
+      "!player.bu​ff(Legacy of the Emperor)",
+      "​!player.buff​(Mark of the Wild)",
+      "!pl​ayer.buff(Blessing of Kings)",
+      "!playe​r.buff(Embrace of the Shale Spider	)"
+    }
+  },
   { "Expel Harm", "toggle.chistacker" }
 }, ProbablyEngine.library.libs.rootWind.buttons )
