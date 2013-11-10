@@ -6,14 +6,11 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
 {
   -- Combat
   { "pause", "modifier.lalt" },
-  
   -- Interrupt
   { "Spear Hand Strike", "modifier.interrupts" },
-
   -- Buffs
   { "Legacy of the White Tiger", "!player.buff" },
   { "Legacy of the Emperor", "!player.buff" },
-  
   -- Cooldowns
   {{
     { "Lifeblood", "player.spell(121279).exists" },
@@ -31,9 +28,6 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "@rootWind.checkStone"
     }
   },
-
-
-
   -- Shared
   {{
     { "Chi Brew", "player.spell(115399).charges = 2" },
@@ -77,7 +71,6 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "player.energy < 90"
     }
   },
-  
   -- AoE
   {{
     { "Rushing Jade Wind", "player.spell(116847).exists" },
@@ -109,16 +102,15 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     },
     { "Spinning Crane Kick" }
   }, "modifier.multitarget" },
-  
-  
+
   -- Single
   { "Rising Sun Kick" },
   { "Fists of Fury",
     {
       "!player.moving",
       "!player.buff(Energizing Brew)",
-      "!player.energy < 60",
-      "player.buff(Tiger Power).duration < 4"
+      "player.energy < 60",
+      "player.buff(Tiger Power).duration > 4"
     }
   },
   {{
@@ -155,8 +147,6 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     }
   },
   { "Blackout Kick", "player.energy > 20" }
-  
-  
 },
 {
   -- Out of Combat
