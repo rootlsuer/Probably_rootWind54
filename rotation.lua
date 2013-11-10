@@ -121,32 +121,29 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
         "player.spell(123986).exists"
       }
     },
-    { "Zen Sphere",
-      {
-        "!player.moving",
-        "!target.debuff(Zen Sphere)",
-        "player.spell(124081).exists"
-      }
-    }
+    {{
+      { "Zen Sphere", "!focus.buff(Zen Sphere)", "focus" },
+      { "Zen Sphere", "!player.buff(Zen Sphere)", "player" },
+    }, "player.spell(124081).exists" },
   }, "player.energy < 70" },
   { "Blackout Kick", "player.buff(Combo Breaker: Blackout Kick)" },
   {{
     { "Tiger Palm", "player.buff(Combo Breaker: Tiger Palm).duration <= 2" },
-    { "Tiger Palm", "player.energy <= 85" }
+    { "Tiger Palm", "player.energy <= 50" }
   }, "player.buff(Combo Breaker: Tiger Palm)" },
   { "Jab",
     {
       "player.chi <= 2",
-      "@rootWind.hasNoAscension"
+      "!player.spell(115396).exists"
     }
   },
   { "Jab",
     {
       "player.chi <= 3",
-      "@rootWind.hasAscension"
+      "player.spell(115396).exists"
     }
   },
-  { "Blackout Kick", "player.energy > 20" }
+  { "Blackout Kick", "player.energy > 10" }
 },
 {
   -- Out of Combat

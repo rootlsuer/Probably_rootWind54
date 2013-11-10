@@ -12,14 +12,6 @@ rootWind.buttons =
     'Interface\\Icons\\ability_monk_expelharm',
     'Stack Chi',
     'Keep Chi at full even OoC...')
-  
-rootWind.hasAscension = function(target)
-  return(select(5, GetTalentInfo(8)))
-end
-
-rootWind.hasNoAscension = function(target)
-  return(not select(5, GetTalentInfo(8)))
-end
 
 rootWind.setFlagged = function (self, ...)
   rootWind.flagged = GetTime()
