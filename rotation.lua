@@ -25,20 +25,20 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     {
       "!player.buff(117666)",
       "!player.buff(1126)",
-      "!player.buff(20​217)",
-      "!player.buff(90363​)"
+      "!player.buff(20217)",
+      "!player.buff(90363)"
     }
   },
   -- Cooldowns
   {{
     { "121279", "player.spell(121279).exists" },
     { "26297", "player.spell(26297).exists" },
+    { "20572", "player.spell(20572).exists" },
+    { "33697", "player.spell(33697).exists" },
     { "33702", "player.spell(33702).exists" },
-	{ "33702", "player.spell(33702).exists" },
-	{ "33702", "player.spell(33702).exists" },
     { "123904", "player.spell(123904).exists" },
     { "#gloves", "@rootWind.useGloves" },
-    --{ "!/use Potion of Virmen's Bite", "@rootWind.usePot" },
+    { "!/run UseItemByName(76089)", "@rootWind.usePot" },
   }, "modifier.cooldowns" },
 
   { "115072", "player.health < 80" },
@@ -71,13 +71,13 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   },
   { "100787", "!player.buff(125359)" },
   {{
-    {"116740", "player.buff(125195).count = 20" },
+    {"116740", {"player.buff(125195).count = 20",  "@rootWind.returnTrue"} },
     {"116740",
       {
         "player.chi >= 2",
         "player.buff(125195).count >= 15",
         "player.buff(125359)",
-        "target.debuff(130320)",
+        "target.debuff(130320)"
       }
     }
   }, "!player.buff(116740)" },
@@ -170,15 +170,16 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "!player.buff(24604)",
       "!player.buff(90309)",
       "!player.buff(126373)",
-      "!player.buff(126309)"
+      "!player.buff(126309)",
+      "@rootWind.returnTrueTest",
     }
   },
   { "117666",
     {
       "!player.buff(117666)",
       "!player.buff(1126)",
-      "!player.buff(20​217)",
-      "!player.buff(90363​)"
+      "!player.buff(20217)",
+      "!player.buff(90363)"
     }
   },
   { "115072", "toggle.chistacker" }
