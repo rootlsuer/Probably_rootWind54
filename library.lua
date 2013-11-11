@@ -6,20 +6,6 @@ rootWind.unflagged = GetTime()
 rootWind.tempNum = 0
 rootWind.chiButton = false
 
-rootWind.returnFalse = function()
-	return false
-end
-
-rootWind.returnTrueTest = function()
-print("trueTest")
-	return true
-end
-
-rootWind.returnFalseTest = function()
-print("falseTest")
-	return false
-end
-
 rootWind.buttons = 
   ProbablyEngine.toggle.create(
     'chistacker',

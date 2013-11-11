@@ -171,7 +171,6 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "!player.buff(90309)",
       "!player.buff(126373)",
       "!player.buff(126309)",
-      "@rootWind.returnTrueTest",
     }
   },
   { "117666",
