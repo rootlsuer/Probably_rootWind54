@@ -7,39 +7,41 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   -- Combat
   { "pause", "modifier.lalt" },
   -- Interrupt
-  { "Spear Hand Strike", "modifier.interrupts" },
+  { "116705", "modifier.interrupts" },
   -- Buffs
-  { "Legacy of the White Tiger",
+  { "116781", -- Legacy of the White Tiger
     {
-      "!player.buff(Legacy of the White Tiger)",
-      "!player.buff(Leader of the Pack)",
-      "!player.buff(Arcane Brilliance)",
-      "!player.buff(Dalaran Brilliance)",
-      "!player.buff(Furious Howl)",
-      "!player.buff(Terrifying Roar)",
-      "!player.buff(Fearless Roar)",
-      "!player.buff(Still Water)"
+      "!player.buff(116781)",
+      "!player.buff(17007)",
+      "!player.buff(1459)",
+      "!player.buff(61316)",
+      "!player.buff(24604)",
+      "!player.buff(90309)",
+      "!player.buff(126373)",
+      "!player.buff(126309)"
     }
   },
-  { "Legacy of the Emperor",
+  { "117666", -- Legacy of the Emperor
     {
-      "!player.bu​ff(Legacy of the Emperor)",
-      "​!player.buff​(Mark of the Wild)",
-      "!pl​ayer.buff(Blessing of Kings)",
-      "!playe​r.buff(Embrace of the Shale Spider)"
+      "!player.buff(117666)",
+      "!player.buff(1126)",
+      "!player.buff(20​217)",
+      "!player.buff(90363​)"
     }
   },
   -- Cooldowns
   {{
-    { "Lifeblood", "player.spell(121279).exists" },
-    { "Berserking", "player.spell(26297).exists" },
-    { "Blood Fury", "player.spell(33702).exists" },
-    { "Invoke Xuen, the White Tiger", "player.spell(123904).exists" },
+    { "121279", "player.spell(121279).exists" },
+    { "26297", "player.spell(26297).exists" },
+    { "33702", "player.spell(33702).exists" },
+	{ "33702", "player.spell(33702).exists" },
+	{ "33702", "player.spell(33702).exists" },
+    { "123904", "player.spell(123904).exists" },
     { "#gloves", "@rootWind.useGloves" },
-    { "!/use Potion of Virmen's Bite", "@rootWind.usePot" },
+    --{ "!/use Potion of Virmen's Bite", "@rootWind.usePot" },
   }, "modifier.cooldowns" },
 
-  { "Expel Harm", "player.health < 80" },
+  { "115072", "player.health < 80" },
   { "!/use healthstone",
     {
       "player.health < 40",
@@ -48,8 +50,8 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   },
   -- Shared
   {{
-    { "Chi Brew", "player.spell(115399).charges = 2" },
-    { "Chi Brew",
+    { "115399", "player.spell(115399).charges = 2" },
+    { "115399",
       {
         "player.spell(115399).charges = 1",
         "player.spell(115399).cd <= 10",
@@ -61,130 +63,123 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
      "player.chi <= 2"
     }
   },
-  { "Tiger Palm",
+  { "100787", -- Tiger Palm
     {
-      "player.buff(Tiger Power)",
-      "player.buff(Tiger Power).duration <= 3"
+      "player.buff(125359)",
+      "player.buff(125359).duration <= 3"
     }
   },
-  { "Tiger Palm", "!player.buff(Tiger Power)" },
+  { "100787", "!player.buff(125359)" },
   {{
-    {"Tigereye Brew", "player.buff.count = 20" },
-    {"Tigereye Brew",
+    {"116740", "player.buff.count = 20" },
+    {"116740",
       {
         "player.chi >= 2",
         "player.buff.count >= 15",
-        "player.buff(Tiger Power)",
-        "target.debuff(Rising Sun Kick)",
+        "player.buff(125359)",
+        "target.debuff(130320)",
       }
     }
-  }, "!player.buff(116740)" },
-  { "Energizing Brew", "player.timetomax > 5" },
-  { "Rising Sun Kick", "!target.debuff(Rising Sun Kick)" },
-  { "Tiger Palm",
+  }, "!player.buff(125195)" },
+  { "115288", "player.timetomax > 5" },
+  { "107428", "!target.debuff(130320)" },
+  { "100787", -- Tiger Palm
     {
-      "!player.buff(Tiger Power)",
-      "target.debuff(Rising Sun Kick)",
-      "target.debuff(Rising Sun Kick).duration > 1",
+      "!player.buff(125359)",
+      "target.debuff(130320)",
+      "target.debuff(130320).duration > 1",
       "player.timetomax > 1"
     }
   },
   -- AoE
   {{
-    { "Rushing Jade Wind", "player.spell(116847).exists" },
-    { "Zen Sphere",
-      {
-        "!player.moving",
-        "!target.debuff(Zen Sphere)",
-        "player.spell(124081).exists"
-      }
-    },
-    { "Chi Wave", "player.spell(115098).exists" },
-    { "Chi Burst",
+    { "116847", "player.spell(116847).exists" },
+    { "115098", "player.spell(115098).exists" },
+    { "123986",
       {
         "!player.moving",
         "player.spell(123986).exists"
       }
     },
-    { "Rising Sun Kick",
+    { "107428",
     {
       "player.chi = 4",
       "!player.spell(115396).exists"
     }
     },
-    { "Rising Sun Kick",
+    { "107428", -- Rising Sun Kick
       {
         "player.chi = 5",
         "player.spell(115396).exists"
       }
     },
-    { "Spinning Crane Kick" }
+    { "101546" }
   }, "modifier.multitarget" },
 
   -- Single
-  { "Rising Sun Kick" },
-  { "Fists of Fury",
+  { "107428" },
+  { "113656",
     {
       "!player.moving",
-      "!player.buff(Energizing Brew)",
+      "!player.buff(115288)",
       "player.timetomax > 4",
-      "player.buff(Tiger Power).duration > 4"
+      "player.buff(125359).duration > 4"
     }
   },
   {{
-    { "Chi Wave", "player.spell(115098).exists" },
-    { "Chi Burst",
+    { "115098", "player.spell(115098).exists" },
+    { "123986",
       {
         "!player.moving",
         "player.spell(123986).exists"
       }
     },
     {{
-      { "Zen Sphere", "!focus.buff(Zen Sphere)", "focus" },
-      { "Zen Sphere", "!player.buff(Zen Sphere)", "player" },
+      { "124081", "!focus.buff(124081)", "focus" },
+      { "124081", "!player.buff(124081)", "player" },
     }, "player.spell(124081).exists" },
   }, "player.timetomax > 2" },
-  { "Blackout Kick", "player.buff(Combo Breaker: Blackout Kick)" },
+  { "100784", "player.buff(116768)" },
   {{
-    { "Tiger Palm", "player.buff(Combo Breaker: Tiger Palm).duration <= 2" },
-    { "Tiger Palm", "player.energy >= 2" }
-  }, "player.buff(Combo Breaker: Tiger Palm)" },
-  { "Jab",
+    { "100787", "player.buff(118864).duration <= 2" },
+    { "100787", "player.energy >= 2" }
+  }, "player.buff(118864)" },
+  { "115687",
     {
       "player.chi <= 2",
       "!player.spell(115396).exists"
     }
   },
-  { "Jab",
+  { "115687",
     {
       "player.chi <= 3",
       "player.spell(115396).exists"
     }
   },
-  { "Blackout Kick", "@rootWind.fillBlackout" }
+  { "100784", "@rootWind.fillBlackout" }
 },
 {
   -- Out of Combat
   -- Buffs
-  { "Legacy of the White Tiger",
+  { "116781",
     {
-      "!player.buff(Legacy of the White Tiger)",
-      "!player.buff(Leader of the Pack)",
-      "!player.buff(Arcane Brilliance)",
-      "!player.buff(Dalaran Brilliance)",
-      "!player.buff(Furious Howl)",
-      "!player.buff(Terrifying Roar)",
-      "!player.buff(Fearless Roar)",
-      "!player.buff(Still Water)"
+      "!player.buff(116781)",
+      "!player.buff(17007)",
+      "!player.buff(1459)",
+      "!player.buff(61316)",
+      "!player.buff(24604)",
+      "!player.buff(90309)",
+      "!player.buff(126373)",
+      "!player.buff(126309)"
     }
   },
-  { "Legacy of the Emperor",
+  { "117666",
     {
-      "!player.bu​ff(Legacy of the Emperor)",
-      "​!player.buff​(Mark of the Wild)",
-      "!pl​ayer.buff(Blessing of Kings)",
-      "!playe​r.buff(Embrace of the Shale Spider)"
+      "!player.buff(117666)",
+      "!player.buff(1126)",
+      "!player.buff(20​217)",
+      "!player.buff(90363​)"
     }
   },
-  { "Expel Harm", "toggle.chistacker" }
+  { "115072", "toggle.chistacker" }
 }, ProbablyEngine.library.libs.rootWind.buttons )
