@@ -80,7 +80,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
         "target.debuff(130320)",
       }
     }
-  }, "!player.buff(125195)" },
+  }, "!player.buff(116740)" },
   { "115288", "player.timetomax > 5" },
   { "107428", "!target.debuff(130320)" },
   { "100787", -- Tiger Palm
