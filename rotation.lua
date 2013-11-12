@@ -114,7 +114,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       }
     },
     { "101546" }
-  }, "modifier.multitarget" },
+  }, "toggle.multitarget" },
 
   -- Single
   { "107428" },
