@@ -11,22 +11,22 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   -- Buffs
   { "116781", -- Legacy of the White Tiger
     {
-      "!player.buff(116781)",
-      "!player.buff(17007)",
-      "!player.buff(1459)",
-      "!player.buff(61316)",
-      "!player.buff(24604)",
-      "!player.buff(90309)",
-      "!player.buff(126373)",
-      "!player.buff(126309)"
+      "!player.buff(116781).any",
+      "!player.buff(17007).any",
+      "!player.buff(1459).any",
+      "!player.buff(61316).any",
+      "!player.buff(24604).any",
+      "!player.buff(90309).any",
+      "!player.buff(126373).any",
+      "!player.buff(126309).any"
     }
   },
   { "117666", -- Legacy of the Emperor
     {
-      "!player.buff(117666)",
-      "!player.buff(1126)",
-      "!player.buff(20217)",
-      "!player.buff(90363)"
+      "!player.buff(117666).any",
+      "!player.buff(1126).any",
+      "!player.buff(20217).any",
+      "!player.buff(90363).any"
     }
   },
   -- Cooldowns
@@ -163,22 +163,22 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   -- Buffs
   { "116781",
     {
-      "!player.buff(116781)",
-      "!player.buff(17007)",
-      "!player.buff(1459)",
-      "!player.buff(61316)",
-      "!player.buff(24604)",
-      "!player.buff(90309)",
-      "!player.buff(126373)",
-      "!player.buff(126309)",
+      "!player.buff(116781).any",
+      "!player.buff(17007).any",
+      "!player.buff(1459).any",
+      "!player.buff(61316).any",
+      "!player.buff(24604).any",
+      "!player.buff(90309).any",
+      "!player.buff(126373).any",
+      "!player.buff(126309).any",
     }
   },
   { "117666",
     {
-      "!player.buff(117666)",
-      "!player.buff(1126)",
-      "!player.buff(20217)",
-      "!player.buff(90363)"
+      "!player.buff(117666).any",
+      "!player.buff(1126).any",
+      "!player.buff(20217).any",
+      "!player.buff(90363).any"
     }
   },
   { "115072", "toggle.chistacker" }
