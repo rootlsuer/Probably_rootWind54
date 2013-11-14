@@ -51,6 +51,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   { "115203", "player.health < 30" },
   -- Shared
   {{
+    { "115080", "@rootWind.touchOfDeath" },
     {{
       { "115399", "player.spell(115399).charges = 2" },
       { "115399",

@@ -158,4 +158,8 @@ function rootWind.checkShark(target)
   end
 end
 
+function rootWind.touchOfDeath(target)
+  return UnitHealth(target) < UnitHealth("player")
+end
+
 ProbablyEngine.library.register("rootWind", rootWind)
