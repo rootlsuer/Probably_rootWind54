@@ -165,7 +165,7 @@ end
 function rootWind.detox(target)
   local debuffType
   for i = 1, 40 do
-    debuffType = select(5, UnitDebuff("player", d))
+    debuffType = select(5, UnitDebuff("player", i))
     if debuffType == "Poison" or debuffType == "Disease" then
       return true
     end
