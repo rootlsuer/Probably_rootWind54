@@ -174,7 +174,8 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "target.range <= 40",
       "!player.moving"
     }
-  }
+  },
+  { "115072", "player.chi < 4" }
 },
 {
   -- Out of Combat
