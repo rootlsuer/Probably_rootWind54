@@ -162,4 +162,14 @@ function rootWind.touchOfDeath(target)
   return UnitHealth(target) < UnitHealth("player")
 end
 
+function rootWind.detox(target)
+  local debuffType
+  for i = 1, 40 do
+    debuffType = select(5, UnitDebuff("player", d))
+    if debuffType == "Poison" or debuffType == "Disease" then
+      return true
+    end
+  end
+end
+
 ProbablyEngine.library.register("rootWind", rootWind)
