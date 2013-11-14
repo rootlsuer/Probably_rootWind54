@@ -42,12 +42,13 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   }, "modifier.cooldowns" },
 
   { "115072", "player.health < 80" },
-  { "!/use healthstone",
+  { "!/run UseItemByName(6262)",
     {
       "player.health < 40",
       "@rootWind.checkStone"
     }
   },
+  { "115203", "player.health < 30" },
   -- Shared
   {{
     {{
