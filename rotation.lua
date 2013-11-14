@@ -49,7 +49,12 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     }
   },
   { "115203", "player.health < 30" },
-  { "Detox", "@rootWind.detox" },
+  { "115450", "@rootWind.detox" },
+  { "115460", "modifier.lcontrol", "ground" },
+  { "119381", "modifier.lshift" },
+  { "122470", "modifier.rshift" },
+  { "137639", { "modifier.ralt", "spell.casted < 1"}, "mouseover" },
+  { "137562", "modifier.rcontrol" },
   -- Shared
   {{
     { "115080", "@rootWind.touchOfDeath" },
