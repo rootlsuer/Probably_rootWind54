@@ -50,113 +50,130 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   },
   -- Shared
   {{
-    { "115399", "player.spell(115399).charges = 2" },
-    { "115399",
-      {
-        "player.spell(115399).charges = 1",
-        "player.spell(115399).cd <= 10",
+    {{
+      { "115399", "player.spell(115399).charges = 2" },
+      { "115399",
+        {
+          "player.spell(115399).charges = 1",
+          "player.spell(115399).cd <= 10",
+        }
       }
-    }
-  },
-    {
-     "player.spell(115399).exists",
-     "player.chi <= 2"
-    }
-  },
-  { "100787", -- Tiger Palm
-    {
-      "player.buff(125359)",
-      "player.buff(125359).duration <= 3"
-    }
-  },
-  { "100787", "!player.buff(125359)" },
-  {{
-    {"116740", {"player.buff(125195).count = 20",  "@rootWind.returnTrue"} },
-    {"116740",
+    },
       {
-        "player.chi >= 2",
-        "player.buff(125195).count >= 15",
+       "player.spell(115399).exists",
+       "player.chi <= 2"
+      }
+    },
+    { "100787", -- Tiger Palm
+      {
         "player.buff(125359)",
-        "target.debuff(130320)"
+        "player.buff(125359).duration <= 3"
       }
-    }
-  }, "!player.buff(116740)" },
-  { "115288", "player.timetomax > 5" },
-  { "107428", "!target.debuff(130320)" },
-  { "100787", -- Tiger Palm
-    {
-      "!player.buff(125359)",
-      "target.debuff(130320)",
-      "target.debuff(130320).duration > 1",
-      "player.timetomax > 1"
-    }
-  },
-  -- AoE
-  {{
-    { "116847", "player.spell(116847).exists" },
-    { "115098", "player.spell(115098).exists" },
-    { "123986",
+    },
+    { "100787", "!player.buff(125359)" },
+    {{
+      {"116740", {"player.buff(125195).count = 20",  "@rootWind.returnTrue"} },
+      {"116740",
+        {
+          "player.chi >= 2",
+          "player.buff(125195).count >= 15",
+          "player.buff(125359)",
+          "target.debuff(130320)"
+        }
+      }
+    }, "!player.buff(116740)" },
+    { "115288", "player.timetomax > 5" },
+    { "107428", "!target.debuff(130320)" },
+    { "100787", -- Tiger Palm
       {
-        "!player.moving",
-        "player.spell(123986).exists"
+        "!player.buff(125359)",
+        "target.debuff(130320)",
+        "target.debuff(130320).duration > 1",
+        "player.timetomax > 1"
       }
     },
-    { "107428",
-    {
-      "player.chi = 4",
-      "!player.spell(115396).exists"
-    }
-    },
-    { "107428", -- Rising Sun Kick
+    -- AoE
+    {{
+      { "116847", "player.spell(116847).exists" },
+      { "115098", "player.spell(115098).exists" },
+      { "123986",
+        {
+          "!player.moving",
+          "player.spell(123986).exists"
+        }
+      },
+      { "107428",
       {
-        "player.chi = 5",
-        "player.spell(115396).exists"
+        "player.chi = 4",
+        "!player.spell(115396).exists"
       }
-    },
-    { "101546" }
-  }, "toggle.multitarget" },
+      },
+      { "107428", -- Rising Sun Kick
+        {
+          "player.chi = 5",
+          "player.spell(115396).exists"
+        }
+      },
+      { "101546" }
+    }, "toggle.multitarget" },
 
-  -- Single
-  { "107428" },
-  { "113656",
-    {
-      "!player.moving",
-      "!player.buff(115288)",
-      "player.timetomax > 4",
-      "player.buff(125359).duration > 4"
-    }
-  },
-  {{
-    { "115098", "player.spell(115098).exists" },
-    { "123986",
+    -- Single
+    { "107428" },
+    { "113656",
       {
         "!player.moving",
-        "player.spell(123986).exists"
+        "!player.buff(115288)",
+        "player.timetomax > 4",
+        "player.buff(125359).duration > 4"
       }
     },
     {{
-      { "124081", "!focus.buff(124081)", "focus" },
-      { "124081", "!player.buff(124081)", "player" },
-    }, "player.spell(124081).exists" },
-  }, "player.timetomax > 2" },
-  { "100784", "player.buff(116768)" },
-  {{
-    { "100787", "player.buff(118864).duration <= 2" },
-    { "100787", "player.energy >= 2" }
-  }, "player.buff(118864)" },
-  { "115687",
+      { "115098", "player.spell(115098).exists" },
+      { "123986",
+        {
+          "!player.moving",
+          "player.spell(123986).exists"
+        }
+      },
+      {{
+        { "124081", "!focus.buff(124081)", "focus" },
+        { "124081", "!player.buff(124081)", "player" },
+      }, "player.spell(124081).exists" },
+    }, "player.timetomax > 2" },
+    { "100784", "player.buff(116768)" },
+    {{
+      { "100787", "player.buff(118864).duration <= 2" },
+      { "100787", "player.energy >= 2" }
+    }, "player.buff(118864)" },
+    { "115687",
+      {
+        "player.chi <= 2",
+        "!player.spell(115396).exists"
+      }
+    },
+    { "115687",
+      {
+        "player.chi <= 3",
+        "player.spell(115396).exists"
+      }
+    },
+    { "100784", "@rootWind.fillBlackout" },
+  }, "target.range <= 5" },
+  -- Ranged
+  { "115073",
     {
-      "player.chi <= 2",
-      "!player.spell(115396).exists"
+      "target.range > 5",
+      "target.range <= 50",
+      "player.chi > 1"
     }
   },
-  { "115687",
+  { "117952",
     {
-      "player.chi <= 3",
-      "player.spell(115396).exists"
+      "target.range > 5",
+      "target.range <= 40",
+      "!player.moving"
     }
-  },
-  { "100784", "@rootWind.fillBlackout" }
+  }
 },
 {
   -- Out of Combat
