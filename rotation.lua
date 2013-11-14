@@ -48,13 +48,18 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "@rootWind.checkStone"
     }
   },
-  { "115203", "player.health < 30" },
+  { "115203", "player.health < 30" },           -- Fort Brew
   { "115450", "@rootWind.detox" },
-  { "115460", "modifier.lcontrol", "ground" },
-  { "119381", "modifier.lshift" },
-  { "122470", "modifier.rshift" },
-  { "137639", { "modifier.ralt", "spell.casted < 1"}, "mouseover" },
-  { "137562", "modifier.rcontrol" },
+  { "115460", "modifier.lcontrol", "ground" },  -- Healing Sphere
+  { "119381", "modifier.lshift" },              -- Leg Sweep
+  { "122470", "modifier.rshift" },              -- Touch of Karma
+  { "137639",
+    {  -- SEF
+      "modifier.ralt",
+      "spell.casted < 1"
+    }, "mouseover"
+  },
+  { "137562", "modifier.rcontrol" }, -- Nimble Brew
   -- Shared
   {{
     { "115080", "@rootWind.touchOfDeath" },
