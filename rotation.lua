@@ -85,7 +85,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     },
     { "100787", "!player.buff(125359)" },
     {{
-      {"116740", {"player.buff(125195).count = 20",  "@rootWind.returnTrue"} },
+      {"116740", "player.buff(125195).count = 20" },
       {"116740",
         {
           "player.chi >= 2",
