@@ -1,5 +1,5 @@
 ## Interface: 50400
-## Title: Probably - rootWind54 (Mage)
+## Title: Probably - rootWind54 (Monk)
 ## Notes: ProbablyEngine Windwalker Monk Profile for 5.4
 ## Dependencies: Probably
 ## Author: rootlsuer
