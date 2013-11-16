@@ -1,0 +1,9 @@
+## Interface: 50400
+## Title: Probably - rootWind54 (Monk)
+## Notes: ProbablyEngine Windwalker Monk Profile for 5.4
+## Dependencies: Probably
+## Author: rootlsuer
+## Version: v541.0
+
+library.lua
+rotation.lua
