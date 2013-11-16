@@ -51,11 +51,11 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   { "115203", "player.health < 30" },           -- Fort Brew
   { "115450", "@rootWind.detox" },
   { "115460", "modifier.lcontrol", "ground" },  -- Healing Sphere
-  { "119381", "modifier.lshift" },              -- Leg Sweep
+  { "119381", "modifier.ralt" },                -- Leg Sweep
   { "122470", "modifier.rshift" },              -- Touch of Karma
   { "137639",
     {  -- SEF
-      "modifier.ralt",
+      "modifier.lshift",
       "spell.casted < 1"
     }, "mouseover"
   },
