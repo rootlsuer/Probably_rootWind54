@@ -127,7 +127,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
           "player.spell(115396).exists"
         }
       },
-      { "101546" }
+      { "101546", "!player.spell(116847).exists" }
     }, "toggle.multitarget" },
 
     -- Single
