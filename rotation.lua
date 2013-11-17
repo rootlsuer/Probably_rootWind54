@@ -182,21 +182,23 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     { "100784", "@rootWind.fillBlackout" },
   }, "target.range <= 5" },
   -- Ranged
-  { "115073",
-    {
-      "target.range > 5",
-      "target.range <= 50",
-      "player.chi > 1"
-    }
-  },
-  { "117952",
-    {
-      "target.range > 5",
-      "target.range <= 40",
-      "!player.moving"
-    }
-  },
-  { "115072", "player.chi < 4" }
+  {{
+    { "115073",
+      {
+        "target.range > 5",
+        "target.range <= 50",
+        "player.chi > 1"
+      }
+    },
+    { "117952",
+      {
+        "target.range > 5",
+        "target.range <= 40",
+        "!player.moving"
+      }
+    },
+    { "115072", "player.chi < 4" }
+  }, "@rootWind.immuneEvents" },
 },
 {
   -- Out of Combat

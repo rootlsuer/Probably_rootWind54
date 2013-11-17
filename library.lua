@@ -175,6 +175,33 @@ function rootWind.itemCooldown(itemID)
 end
 
 function rootWind.immuneEvents(unit)
+  -- Crowd Control
+  local cc = {
+    49203, -- Hungering Cold
+     6770, -- Sap
+     1776, -- Gouge
+    51514, -- Hex
+     9484, -- Shackle Undead
+      118, -- Polymorph
+    28272, -- Polymorph (pig)
+    28271, -- Polymorph (turtle)
+    61305, -- Polymorph (black cat)
+    61025, -- Polymorph (serpent) -- FIXME: gone ?
+    61721, -- Polymorph (rabbit)
+    61780, -- Polymorph (turkey)
+     3355, -- Freezing Trap
+    19386, -- Wyvern Sting
+    20066, -- Repentance
+    90337, -- Bad Manner (Monkey) -- FIXME: to check
+     2637, -- Hibernate
+    82676, -- Ring of Frost
+   115078, -- Paralysis
+    76780, -- Bind Elemental
+     9484, -- Shackle Undead
+     1513, -- Scare Beast
+   115268, -- Mesmerize
+  }
+  if rootWind.hasDebuffTable(unit, cc) then return false end
   if UnitAura(unit,GetSpellInfo(116994))
 		or UnitAura(unit,GetSpellInfo(122540))
 		or UnitAura(unit,GetSpellInfo(123250))
@@ -184,6 +211,15 @@ function rootWind.immuneEvents(unit)
     or UnitAura(unit,GetSpellInfo(143574)) -- Heroic Immerseus: Swelling Corruption
 		then return false end
   return true
+end
+
+function rootWind.hasDebuffTable = function(target, spells)
+  for i = 1, 40 do
+    local _,_,_,_,_,_,_,_,_,_,spellId = _G['UnitDebuff'](target, i)
+    for k,v in pairs(spells) do
+      if spellId == v then return true end
+    end
+  end
 end
 
 function rootWind.checkStone(target)
