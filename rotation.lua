@@ -29,6 +29,16 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "!player.buff(90363).any"
     }
   },
+  -- Queued Spells
+  { "119381", "@rootWind.checkQueue(119381)" },
+  { "122470", "@rootWind.checkQueue(122470)" },
+  { "117368", "@rootWind.checkQueue(117368)" },
+  { "122783", "@rootWind.checkQueue(122783)" },
+  { "122278", "@rootWind.checkQueue(122278)" },
+  { "116844", "@rootWind.checkQueue(116844)" },
+  { "116841", "@rootWind.checkQueue(116841)" },
+  { "127562", "@rootWind.checkQueue(137562)" },
+  { "115460", "@rootWind.checkQueue(115460)", "ground" },
   -- Cooldowns
   {{
     { "121279", "player.spell(121279).exists" },

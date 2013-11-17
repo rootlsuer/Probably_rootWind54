@@ -5,6 +5,8 @@ rootWind.flagged = GetTime()
 rootWind.unflagged = GetTime()
 rootWind.tempNum = 0
 rootWind.chiButton = false
+rootWind.queueSpell = nil
+rootWind.queueTime = 0
 
 rootWind.buttons = 
   ProbablyEngine.toggle.create(
@@ -12,6 +14,52 @@ rootWind.buttons =
     'Interface\\Icons\\ability_monk_expelharm',
     'Stack Chi',
     'Keep Chi at full even OoC...')
+    
+SLASH_ECAST1 = "/root"
+function SlashCmdList.ECAST(msg, editbox)		
+	local command = msg:match("^(.*)$")
+	if command == "Leg Sweep" or command == 119381 then
+		rootWind.queueSpell = 119381
+	elseif command == "Touch of Karma" or command == 122470 then
+    rootWind.queueSpell = 122470
+  elseif command == "Grapple Weapon" or command == 117368 then
+    rootWind.queueSpell = 117368
+  elseif command == "Diffuse Magic" or command == 122783 then
+    rootWind.queueSpell = 122783
+  elseif command == "Dampen Harm" or command == 122278 then
+    rootWind.queueSpell = 122278
+  elseif command == "Ring of Peace" or command == 116844 then
+    rootWind.queueSpell = 116844
+  elseif command == "Tiger's Lust" or command == 116841 then
+    rootWind.queueSpell = 116841
+  elseif command == "Nimble Brew" or command == 137562 then
+    rootWind.queueSpell = 137562
+  elseif command == "Healing Sphere" or command == 115460 then
+    rootWind.queueSpell = 115460
+  else
+    rootWind.queueSpell = nil
+  end
+  if rootWind.queueSpell ~= nil then rootWind.queueTime = GetTime() end
+end
+
+rootWind.checkQueue = function (spellId)
+  if (GetTime() - rootWind.queueTime) > 4 then
+    rootWind.queueTime = 0
+    rootWind.queueSpell = nil
+    return false
+  else
+    if rootWind.queueSpell then
+      if rootWind.queueSpell == spellId then
+        if ProbablyEngine.parser.lastCast == GetSpellName(spellId) then
+          rootWind.queueSpell = nil
+          rootWind.queueTime = 0
+        end
+        return true
+      end
+    end
+  end
+  return false
+end
 
 rootWind.setFlagged = function (self, ...)
   rootWind.flagged = GetTime()
