@@ -37,7 +37,6 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
   { "122278", "@rootWind.checkQueue(122278)" },
   { "116844", "@rootWind.checkQueue(116844)" },
   { "116841", "@rootWind.checkQueue(116841)" },
-  { "127562", "@rootWind.checkQueue(137562)" },
   { "115460", "@rootWind.checkQueue(115460)", "ground" },
   -- Cooldowns
   {{

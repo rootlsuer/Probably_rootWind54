@@ -32,8 +32,6 @@ function SlashCmdList.ECAST(msg, editbox)
     rootWind.queueSpell = 116844
   elseif command == "Tiger's Lust" or command == 116841 then
     rootWind.queueSpell = 116841
-  elseif command == "Nimble Brew" or command == 137562 then
-    rootWind.queueSpell = 137562
   elseif command == "Healing Sphere" or command == 115460 then
     rootWind.queueSpell = 115460
   else
