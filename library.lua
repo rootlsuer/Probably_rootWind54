@@ -213,7 +213,7 @@ function rootWind.immuneEvents(unit)
   return true
 end
 
-function rootWind.hasDebuffTable = function(target, spells)
+function rootWind.hasDebuffTable(target, spells)
   for i = 1, 40 do
     local _,_,_,_,_,_,_,_,_,_,spellId = _G['UnitDebuff'](target, i)
     for k,v in pairs(spells) do
