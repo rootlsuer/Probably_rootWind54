@@ -8,12 +8,13 @@ rootWind.chiButton = false
 rootWind.queueSpell = nil
 rootWind.queueTime = 0
 
-rootWind.buttons = 
+rootWind.buttons = function() 
   ProbablyEngine.toggle.create(
     'chistacker',
     'Interface\\Icons\\ability_monk_expelharm',
     'Stack Chi',
     'Keep Chi at full even OoC...')
+end
     
 SLASH_ECAST1 = "/root"
 function SlashCmdList.ECAST(msg, editbox)		
