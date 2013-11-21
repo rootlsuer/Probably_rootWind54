@@ -46,10 +46,10 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     { "33697", "player.spell(33697).exists" },
     { "33702", "player.spell(33702).exists" },
     { "123904", "player.spell(123904).exists" },
-    { "#gloves", "@rootWind.useGloves" },
+    { "#gloves" },
     { "#6089", "@rootWind.usePot" },
   }, "modifier.cooldowns" },
-
+  
   { "115072", "player.health < 80" },
   { "#6262", "player.health < 40" },
   { "115203", "player.health < 30" },           -- Fort Brew
@@ -63,6 +63,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "spell.casted < 1"
     }, "mouseover"
   },
+
   { "137562", "modifier.rcontrol" }, -- Nimble Brew
   -- Shared
   {{

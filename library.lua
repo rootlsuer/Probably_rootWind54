@@ -109,16 +109,6 @@ function rootWind.spellCooldown(spell)
   return 0
 end
 
-function rootWind.useGloves(target)
-  local hasEngi = false
-  for i=1,9 do
-    if select(7,GetProfessionInfo(i)) == 202 then hasEngi = true end
-  end
-  if hasEngi == false then return false end
-  if GetItemCooldown(GetInventoryItemID("player", 10)) > 0 then return false end
-  return true
-end
-
 function rootWind.fillBlackout()
   local energy = UnitPower("player")
   local regen = select(2, GetPowerRegen("player"))
