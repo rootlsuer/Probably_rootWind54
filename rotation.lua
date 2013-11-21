@@ -47,16 +47,11 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
     { "33702", "player.spell(33702).exists" },
     { "123904", "player.spell(123904).exists" },
     { "#gloves", "@rootWind.useGloves" },
-    { "!/run UseItemByName(76089)", "@rootWind.usePot" },
+    { "#6089", "@rootWind.usePot" },
   }, "modifier.cooldowns" },
 
   { "115072", "player.health < 80" },
-  { "!/run UseItemByName(6262)",
-    {
-      "player.health < 40",
-      "@rootWind.checkStone"
-    }
-  },
+  { "#6262", "player.health < 40" },
   { "115203", "player.health < 30" },           -- Fort Brew
   { "115450", "@rootWind.detox" },
   { "115460", "modifier.lcontrol", "ground" },  -- Healing Sphere

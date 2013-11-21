@@ -222,16 +222,6 @@ function rootWind.hasDebuffTable(target, spells)
   end
 end
 
-function rootWind.checkStone(target)
-  if GetItemCount(6262, false, true) > 0 then
-    if not rootWind.items[6262] then
-      return true
-    elseif (GetTime() - rootWind.items[6262].lastCast) > 120 then
-      return true
-    end
-  end
-end
-
 function rootWind.checkShark(target)
   if GetItemCount(77589, false, false) > 0 then
     if not rootWind.items[77589] then return true end
