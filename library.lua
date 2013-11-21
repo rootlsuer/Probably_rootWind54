@@ -175,6 +175,7 @@ function rootWind.itemCooldown(itemID)
 end
 
 function rootWind.immuneEvents(unit)
+  if not UnitAffectingCombat(unit) then return false end
   -- Crowd Control
   local cc = {
     49203, -- Hungering Cold
