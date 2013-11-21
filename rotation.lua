@@ -19,15 +19,15 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "!player.buff(90309).any",
       "!player.buff(126373).any",
       "!player.buff(126309).any"
-    }
+    }, "player"
   },
-  { "117666", -- Legacy of the Emperor
+  { "115921", -- Legacy of the Emperor
     {
       "!player.buff(117666).any",
       "!player.buff(1126).any",
       "!player.buff(20217).any",
       "!player.buff(90363).any"
-    }
+    }, "player"
   },
   -- Queued Spells
   { "119381", "@rootWind.checkQueue(119381)" },
@@ -198,7 +198,7 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
 {
   -- Out of Combat
   -- Buffs
-  { "116781",
+  { "116781", -- Legacy of the White Tiger
     {
       "!player.buff(116781).any",
       "!player.buff(17007).any",
@@ -207,16 +207,16 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       "!player.buff(24604).any",
       "!player.buff(90309).any",
       "!player.buff(126373).any",
-      "!player.buff(126309).any",
-    }
+      "!player.buff(126309).any"
+    }, "player"
   },
-  { "117666",
+  { "115921", -- Legacy of the Emperor
     {
       "!player.buff(117666).any",
       "!player.buff(1126).any",
       "!player.buff(20217).any",
       "!player.buff(90363).any"
-    }
+    }, "player"
   },
   { "115072", "toggle.chistacker" }
 }, ProbablyEngine.library.libs.rootWind.buttons )
