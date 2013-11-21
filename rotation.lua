@@ -163,9 +163,19 @@ ProbablyEngine.rotation.register_custom(269, "rootWind54",
       { "100787", "player.energy >= 2" }
     }, "player.buff(118864)" },
     { "108557", "player.chi <= 2" },
-    { "108557", "player.chi <= 3" },
+    { "108557",
+      {
+        "player.chi <= 3",
+        "player.spell(115396).exists"
+      }
+    },
     { "100780", "player.chi <= 2" },
-    { "100780", "player.chi <= 3" },
+    { "100780",
+      {
+        "player.chi <= 3",
+        "player.spell(115396).exists"
+      }
+    },
     { "100784", "@rootWind.fillBlackout" },
   }, "target.range <= 5" },
   -- Ranged
